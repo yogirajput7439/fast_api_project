@@ -22,14 +22,23 @@ cursor = conn.cursor()
 #     );
 # """)
 
-cursor.execute("""
-    INSERT INTO students (name, email, age, city)
-    VALUES (%s, %s, %s, %s)
-""", ("Yogesh", "yogesh@gmail.com", 22, "Sambhajinagar"))
+# cursor.execute("""
+#     INSERT INTO students (name, email, age, city)
+#     VALUES (%s, %s, %s, %s)
+# """, ("Vijay", "vijay@gmail.com", 25, "Delhi"))
 
-conn.commit()
+# conn.commit()
 
-print("Database Created Successfully!")
+# print("Student added successfully")
+
+cursor.execute("SELECT * FROM students")
+
+students = cursor.fetchall() # get the all inputs
+
+for student in students:
+    print(student)
+
+# print("Database Created Successfully!")
 
 cursor.close()
 conn.close()
