@@ -31,12 +31,61 @@ cursor = conn.cursor()
 
 # print("Student added successfully")
 
-cursor.execute("SELECT * FROM students")
+# cursor.execute("SELECT * FROM students")
 
-students = cursor.fetchall() # get the all inputs
+# students = cursor.fetchall() # get the all inputs
 
-for student in students:
-    print(student)
+# for student in students:
+#     print(student)
+
+#INSERT INTO THE TABLE
+
+# cursor.execute("""
+#     INSERT INTO students (name, email, age, city)
+#     VALUES (%s, %s, %s, %s)
+# """,
+# ("Kanan", "karan@gmail.com", 23, "Goa"))
+
+# conn.commit()
+
+# SELECT FROM TABLE
+
+# cursor.execute("""
+#     SELECT * FROM students
+# """)
+
+# students = cursor.fetchall()
+
+# for student in students:
+#     print(student)
+
+# WHERE - Filter records 
+
+# cursor.execute(
+#     "SELECT * FROM students WHERE city = %s",
+#     ("Pune",))
+
+# print(cursor.fetchall())
+
+# UPDATE - Modify Records
+
+# cursor.execute("""
+#     UPDATE students
+#     SET city = %s
+#     WHERE name = %s
+# """, ("Rajur", "Kanan"))
+
+# conn.commit()
+
+# DELETE - Remove recods
+
+# cursor.execute(
+#     "DELETE FROM students WHERE name = %s", 
+#     ("Rahul",))
+
+# conn.commit()
+
+
 
 # print("Database Created Successfully!")
 
